@@ -1,19 +1,20 @@
 import React from 'react';
-import { View, } from 'react-native';
+import { FlatList, View, } from 'react-native';
 import ProductItem from '../../components/ProductItem';
+import products from '../../data/products';
 
 const HomeScreen = () => {
+
     return (
         <View>
-            <ProductItem />
-            <ProductItem />
-            <ProductItem />
-            <ProductItem />
-            <ProductItem />
-
+            <FlatList
+                data={products}
+                renderItem={({ item }) => {
+                    return <ProductItem item={item} />
+                }}
+            />
         </View>
     )
 }
-
 
 export default HomeScreen;

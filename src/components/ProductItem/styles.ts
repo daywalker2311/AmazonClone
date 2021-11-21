@@ -25,8 +25,14 @@ const styles = StyleSheet.create({
     price: {
         fontSize: 18,
         fontWeight: 'bold',
+        marginRight: 5
     },
     ratingContainer: {
+
+    },
+    priceContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
 
     }
 });
